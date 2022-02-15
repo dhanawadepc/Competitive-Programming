@@ -1,0 +1,19 @@
+'''
+Write a function, add_it(), that takes a single integer as input and 
+returns the sum of the integers from zero to the input parameter.
+The function should return 0 if a non-integer is passed in.
+-------------
+'''
+def add_it(n):
+    if n.isnumeric():
+        nm = int(n)
+        sm =0
+        for i in range(nm+1):
+            sm += i
+        return sm
+    else:
+        return 0
+
+
+num = input('Enter a number: ')
+print(add_it_up(num))
