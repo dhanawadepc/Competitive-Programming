@@ -1,0 +1,21 @@
+find total number of wovels in all possible substrings from a given string
+
+def substrings(string):
+  length = len(string)
+  alist = []
+  for i in range(length):
+    for j in range(i,length):
+      alist.append(string[i:j + 1])
+  return alist
+
+# print(substrings('abcde'))
+
+str_input = input('Enter the string: ')
+l = substrings(str_input)
+l_wovels = 'aeiouAEIOU'
+res = 0
+for word in l:
+    for letter in word:
+        if letter in l_wovels:
+            res +=1
+print(res)
